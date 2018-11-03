@@ -4,7 +4,7 @@ use kartik\tabs\TabsX;
 use yii\helpers\Url;
 $items = [
     [
-        'label' => '<i class="glyphicon glyphicon-book"></i> '. Html::encode(__t('app', 'Media')),
+        'label' => '<i class="glyphicon glyphicon-book"></i> '. Html::encode(t('app', 'Media')),
         'content' => $this->render('_detail', [
             'model' => $model,
         ]),

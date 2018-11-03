@@ -32,8 +32,8 @@ $model->status = \thienhungho\MediaManagement\modules\MediaBase\Media::STATUS_PU
 
         <div class="form-group">
             <?php if (Yii::$app->controller->action->id != 'save-as-new'): ?>
-                <?= Html::submitButton($model->isNewRecord ? __t('app', 'Create') : __t('app', 'Update'), ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?><?php endif; ?>
-            <?= Html::a(__t('app', 'Cancel'), request()->referrer, ['class' => 'btn btn-danger']) ?>
+                <?= Html::submitButton($model->isNewRecord ? t('app', 'Create') : t('app', 'Update'), ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?><?php endif; ?>
+            <?= Html::a(t('app', 'Cancel'), request()->referrer, ['class' => 'btn btn-danger']) ?>
         </div>
 
         <?php ActiveForm::end(); ?>

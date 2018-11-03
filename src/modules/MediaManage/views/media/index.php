@@ -7,7 +7,7 @@
 use kartik\grid\GridView;
 use yii\helpers\Html;
 
-$this->title = __t('app', 'Media');
+$this->title = t('app', 'Media');
 $this->params['breadcrumbs'][] = $this->title;
 $search = "$('.search-button').click(function(){
 	$('.search-form').toggle(1000);
@@ -21,9 +21,9 @@ $this->registerJs($search);
     <div class="row">
         <div class="col-lg-10">
             <p>
-                <?= Html::a(__t('app', 'Create Media'), ['create'], ['class' => 'btn btn-success']) ?>
-                <?= Html::a(__t('app', 'Create Multiple Media'), ['create-multiple'], ['class' => 'btn btn-success']) ?>
-                <?= Html::a(__t('app', 'Advance Search'), '#', ['class' => 'btn btn-info search-button']) ?>
+                <?= Html::a(t('app', 'Create Media'), ['create'], ['class' => 'btn btn-success']) ?>
+                <?= Html::a(t('app', 'Create Multiple Media'), ['create-multiple'], ['class' => 'btn btn-success']) ?>
+                <?= Html::a(t('app', 'Advance Search'), '#', ['class' => 'btn btn-info search-button']) ?>
             </p>
         </div>
         <div class="col-lg-2">
@@ -95,7 +95,7 @@ $this->registerJs($search);
                 'pluginOptions' => ['allowClear' => true],
             ],
             'filterInputOptions'  => [
-                'placeholder' => __t('app', 'Status'),
+                'placeholder' => t('app', 'Status'),
                 'id'          => 'grid-search-status',
             ],
         ],
@@ -105,40 +105,40 @@ $this->registerJs($search);
             'attribute'           => 'status',
             'value'               => function($model, $key, $index, $column) {
                 if ($model->status == \thienhungho\MediaManagement\modules\MediaBase\Media::STATUS_PENDING) {
-                    return '<span class="label-warning label">' . __t('app', 'Pending') . '</span>';
+                    return '<span class="label-warning label">' . t('app', 'Pending') . '</span>';
                 } elseif ($model->status == \thienhungho\MediaManagement\modules\MediaBase\Media::STATUS_PUBLIC) {
-                    return '<span class="label-success label">' . __t('app', 'Public') . '</span>';
+                    return '<span class="label-success label">' . t('app', 'Public') . '</span>';
                 } elseif ($model->status == \thienhungho\MediaManagement\modules\MediaBase\Media::STATUS_DRAFT) {
-                    return '<span class="label-danger label">' . __t('app', 'Draft') . '</span>';
+                    return '<span class="label-danger label">' . t('app', 'Draft') . '</span>';
                 }
             },
             'filterType'          => GridView::FILTER_SELECT2,
             'filter'              => \yii\helpers\ArrayHelper::map([
                 [
                     'value' => \thienhungho\MediaManagement\modules\MediaBase\Media::STATUS_PENDING,
-                    'name'  => __t('app', 'Pending'),
+                    'name'  => t('app', 'Pending'),
                 ],
                 [
                     'value' => \thienhungho\MediaManagement\modules\MediaBase\Media::STATUS_PUBLIC,
-                    'name'  => __t('app', 'Public'),
+                    'name'  => t('app', 'Public'),
                 ],
                 [
                     'value' => \thienhungho\MediaManagement\modules\MediaBase\Media::STATUS_DRAFT,
-                    'name'  => __t('app', 'Draft'),
+                    'name'  => t('app', 'Draft'),
                 ],
             ], 'value', 'name'),
             'filterWidgetOptions' => [
                 'pluginOptions' => ['allowClear' => true],
             ],
             'filterInputOptions'  => [
-                'placeholder' => __t('app', 'Status'),
+                'placeholder' => t('app', 'Status'),
                 'id'          => 'grid-search-status',
             ],
         ],
     ];
     $activeColumn = grid_view_default_active_column_cofig();
     $activeColumn['buttons']['get-path'] = function($url, $model, $key) {
-        return '<a title="' . __t('app', 'Get Path') . '" onclick="prompt(\'Media Path: \', \'' . $_SERVER['HTTP_HOST'] . '/' . $model->path . '\' )"><span class="btn btn-xs grey-cascade"><span class="fa fa-link"></span></span></a>';
+        return '<a title="' . t('app', 'Get Path') . '" onclick="prompt(\'Media Path: \', \'' . $_SERVER['HTTP_HOST'] . '/' . $model->path . '\' )"><span class="btn btn-xs grey-cascade"><span class="fa fa-link"></span></span></a>';
     };
     $activeColumn['template'] = '{get-path} {save-as-new} {view} {update} {delete}';
     $gridColumn[] = $activeColumn;
@@ -164,18 +164,18 @@ $this->registerJs($search);
             <?= \kartik\widgets\Select2::widget([
                 'name'    => 'action',
                 'value'   => '',
-                'data'    => [ACTION_DELETE => __t('app', 'Delete')],
+                'data'    => [ACTION_DELETE => t('app', 'Delete')],
                 'theme'   => \kartik\widgets\Select2::THEME_BOOTSTRAP,
                 'options' => [
                     'multiple'    => false,
-                    'placeholder' => __t('app', 'Bulk Actions ...'),
+                    'placeholder' => t('app', 'Bulk Actions ...'),
                 ],
             ]); ?>
         </div>
         <div class="col-lg-10">
-            <?= Html::submitButton(__t('app', 'Apply'), [
+            <?= Html::submitButton(t('app', 'Apply'), [
                 'class'        => 'btn btn-primary',
-                'data-confirm' => __t('app', 'Are you want to do this?'),
+                'data-confirm' => t('app', 'Are you want to do this?'),
             ]) ?>
         </div>
     </div>

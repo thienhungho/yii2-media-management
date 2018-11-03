@@ -5,12 +5,12 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model thienhungho\MediaManagement\modules\MediaBase\Media */
 
-$this->title = __t('app', 'Update {modelClass}: ', [
+$this->title = t('app', 'Update {modelClass}: ', [
     'modelClass' => 'Media',
 ]) . ' ' . $model->name;
-$this->params['breadcrumbs'][] = ['label' => __t('app', 'Media'), 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => t('app', 'Media'), 'url' => ['index']];
 $this->params['breadcrumbs'][] = ['label' => $model->name, 'url' => ['view', 'id' => $model->id]];
-$this->params['breadcrumbs'][] = __t('app', 'Update');
+$this->params['breadcrumbs'][] = t('app', 'Update');
 ?>
 <div class="media-update">
 

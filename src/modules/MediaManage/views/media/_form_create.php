@@ -21,9 +21,9 @@ $model->status = \thienhungho\MediaManagement\modules\MediaBase\Media::STATUS_PU
         <?= $form->field($model, 'status', [
             'addon' => ['prepend' => ['content' => '<span class="fa fa-eye"></span>']],
         ])->radioButtonGroup([
-            \thienhungho\MediaManagement\modules\MediaBase\Media::STATUS_PUBLIC  => __t('app', 'Public'),
-            \thienhungho\MediaManagement\modules\MediaBase\Media::STATUS_PENDING => __t('app', 'Pending'),
-            \thienhungho\MediaManagement\modules\MediaBase\Media::STATUS_DRAFT   => __t('app', 'Draft'),
+            \thienhungho\MediaManagement\modules\MediaBase\Media::STATUS_PUBLIC  => t('app', 'Public'),
+            \thienhungho\MediaManagement\modules\MediaBase\Media::STATUS_PENDING => t('app', 'Pending'),
+            \thienhungho\MediaManagement\modules\MediaBase\Media::STATUS_DRAFT   => t('app', 'Draft'),
         ], [
             'class' => 'btn-group-sm',
             'itemOptions' => ['labelOptions' => ['class' => 'btn green']]
@@ -33,28 +33,28 @@ $model->status = \thienhungho\MediaManagement\modules\MediaBase\Media::STATUS_PU
             'addon' => ['prepend' => ['content' => '<span class="fa fa-edit"></span>']],
         ])->textInput([
             'maxlength'   => true,
-            'placeholder' => __t('app', 'Title'),
+            'placeholder' => t('app', 'Title'),
         ]) ?>
 
         <?= $form->field($model, 'caption', [
             'addon' => ['prepend' => ['content' => '<span class="fa fa-edit"></span>']],
         ])->textInput([
             'maxlength'   => true,
-            'placeholder' => __t('app', 'Caption'),
+            'placeholder' => t('app', 'Caption'),
         ]) ?>
 
         <?= $form->field($model, 'alt', [
             'addon' => ['prepend' => ['content' => '<span class="fa fa-edit"></span>']],
         ])->textInput([
             'maxlength'   => true,
-            'placeholder' => __t('app', 'Alt'),
+            'placeholder' => t('app', 'Alt'),
         ]) ?>
 
         <?= $form->field($model, 'description', [
             'addon' => ['prepend' => ['content' => '<span class="fa fa-edit"></span>']],
         ])->textInput([
             'maxlength'   => true,
-            'placeholder' => __t('app', 'Description'),
+            'placeholder' => t('app', 'Description'),
         ]) ?>
 
         <?= $form->field($model, 'path')->fileInput()
@@ -68,13 +68,13 @@ $model->status = \thienhungho\MediaManagement\modules\MediaBase\Media::STATUS_PU
                     'initialCaption'       => $model->path,
                     'overwriteInitial'     => true,
                 ],
-            ])->label(__t('app', 'Media'));
+            ])->label(t('app', 'Media'));
         ?>
 
         <div class="form-group">
             <?php if (Yii::$app->controller->action->id != 'save-as-new'): ?>
-                <?= Html::submitButton($model->isNewRecord ? __t('app', 'Create') : __t('app', 'Update'), ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?><?php endif; ?>
-            <?= Html::a(__t('app', 'Cancel'), request()->referrer, ['class' => 'btn btn-danger']) ?>
+                <?= Html::submitButton($model->isNewRecord ? t('app', 'Create') : t('app', 'Update'), ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?><?php endif; ?>
+            <?= Html::a(t('app', 'Cancel'), request()->referrer, ['class' => 'btn btn-danger']) ?>
         </div>
 
         <?php ActiveForm::end(); ?>

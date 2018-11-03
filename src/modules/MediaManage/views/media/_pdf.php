@@ -8,14 +8,14 @@ use kartik\grid\GridView;
 /* @var $model thienhungho\MediaManagement\modules\MediaBase\Media */
 
 $this->title = $model->name;
-$this->params['breadcrumbs'][] = ['label' => __t('app', 'Media'), 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => t('app', 'Media'), 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="media-view">
 
     <div class="row">
         <div class="col-sm-9">
-            <h2><?= __t('app', 'Media').' '. Html::encode($this->title) ?></h2>
+            <h2><?= t('app', 'Media').' '. Html::encode($this->title) ?></h2>
         </div>
     </div>
 
