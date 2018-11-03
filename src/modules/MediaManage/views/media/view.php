@@ -5,7 +5,7 @@ use yii\widgets\DetailView;
 use kartik\grid\GridView;
 
 /* @var $this yii\web\View */
-/* @var $model thienhungho\MediaManagement\modules\media\Media */
+/* @var $model thienhungho\MediaManagement\modules\MediaBase\Media */
 
 $this->title = $model->name;
 $this->params['breadcrumbs'][] = ['label' => __t('app', 'Media'), 'url' => ['index']];

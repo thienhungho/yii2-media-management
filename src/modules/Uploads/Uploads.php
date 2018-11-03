@@ -2,7 +2,7 @@
 
 namespace thienhungho\MediaManagement\modules\uploads;
 
-use thienhungho\MediaManagement\modules\media\Media;
+use thienhungho\MediaManagement\modules\MediaBase\Media;
 use Imagine\Image\Box;
 use yii\helpers\FileHelper;
 use yii\imagine\Image;

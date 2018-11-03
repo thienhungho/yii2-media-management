@@ -5,10 +5,10 @@ namespace thienhungho\MediaManagement\modules\MediaManage\search;
 use Yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use thienhungho\MediaManagement\modules\media\Media;
+use thienhungho\MediaManagement\modules\MediaBase\Media;
 
 /**
- * thienhungho\MediaManagement\modules\MediaManage\search\MediaSearch represents the model behind the search form about `thienhungho\MediaManagement\modules\media\Media`.
+ * thienhungho\MediaManagement\modules\MediaManage\search\MediaSearch represents the model behind the search form about `thienhungho\MediaManagement\modules\MediaBase\Media`.
  */
  class MediaSearch extends Media
 {

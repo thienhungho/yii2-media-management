@@ -1,9 +1,9 @@
 <?php
 
-namespace thienhungho\MediaManagement\modules\media;
+namespace thienhungho\MediaManagement\modules\MediaBase;
 
 use Yii;
-use \thienhungho\MediaManagement\modules\media\base\Media as BaseMedia;
+use \thienhungho\MediaManagement\modules\MediaBase\base\Media as BaseMedia;
 
 /**
  * This is the model class for table "media".

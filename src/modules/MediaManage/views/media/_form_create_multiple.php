@@ -4,9 +4,9 @@ use kartik\widgets\ActiveForm;
 use yii\helpers\Html;
 
 /* @var $this yii\web\View */
-/* @var $model thienhungho\MediaManagement\modules\media\Media */
+/* @var $model thienhungho\MediaManagement\modules\MediaBase\Media */
 /* @var $form yii\widgets\ActiveForm */
-$model->status = \thienhungho\MediaManagement\modules\media\Media::STATUS_PUBLIC;
+$model->status = \thienhungho\MediaManagement\modules\MediaBase\Media::STATUS_PUBLIC;
 ?>
 
 <div class="row media-form">

@@ -8,7 +8,7 @@
 
 namespace thienhungho\MediaManagement\modules\uploads;
 
-use thienhungho\MediaManagement\modules\media\Media;
+use thienhungho\MediaManagement\modules\MediaBase\Media;
 use yii\base\Model;
 use yii\helpers\FileHelper;
 use yii\imagine\Image;

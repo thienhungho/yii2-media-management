@@ -3,7 +3,7 @@
 use yii\helpers\Html;
 
 /* @var $this yii\web\View */
-/* @var $model thienhungho\MediaManagement\modules\media\Media */
+/* @var $model thienhungho\MediaManagement\modules\MediaBase\Media */
 
 $this->title = __t('app', 'Update {modelClass}: ', [
     'modelClass' => 'Media',

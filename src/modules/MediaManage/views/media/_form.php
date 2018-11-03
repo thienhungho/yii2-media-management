@@ -4,7 +4,7 @@ use kartik\widgets\ActiveForm;
 use yii\helpers\Html;
 
 /* @var $this yii\web\View */
-/* @var $model thienhungho\MediaManagement\modules\media\Media */
+/* @var $model thienhungho\MediaManagement\modules\MediaBase\Media */
 /* @var $form yii\widgets\ActiveForm */
 ?>
 
@@ -28,9 +28,9 @@ use yii\helpers\Html;
         <?= $form->field($model, 'status', [
             'addon' => ['prepend' => ['content' => '<span class="fa fa-eye"></span>']],
         ])->radioButtonGroup([
-            \thienhungho\MediaManagement\modules\media\Media::STATUS_PUBLIC  => __t('app', 'Public'),
-            \thienhungho\MediaManagement\modules\media\Media::STATUS_PENDING => __t('app', 'Pending'),
-            \thienhungho\MediaManagement\modules\media\Media::STATUS_DRAFT   => __t('app', 'Draft'),
+            \thienhungho\MediaManagement\modules\MediaBase\Media::STATUS_PUBLIC  => __t('app', 'Public'),
+            \thienhungho\MediaManagement\modules\MediaBase\Media::STATUS_PENDING => __t('app', 'Pending'),
+            \thienhungho\MediaManagement\modules\MediaBase\Media::STATUS_DRAFT   => __t('app', 'Draft'),
         ], [
             'class' => 'btn-group-sm',
             'itemOptions' => ['labelOptions' => ['class' => 'btn green']]

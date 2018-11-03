@@ -1,6 +1,6 @@
 <?php
 
-namespace thienhungho\MediaManagement\modules\media;
+namespace thienhungho\MediaManagement\modules\MediaBase;
 
 /**
  * This is the ActiveQuery class for [[Media]].

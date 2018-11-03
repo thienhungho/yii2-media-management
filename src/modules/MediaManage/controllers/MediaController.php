@@ -4,7 +4,7 @@ namespace thienhungho\MediaManagement\modules\MediaManage\controllers;
 
 use thienhungho\MediaManagement\modules\uploads\Uploads;
 use Yii;
-use thienhungho\MediaManagement\modules\media\Media;
+use thienhungho\MediaManagement\modules\MediaBase\Media;
 use thienhungho\MediaManagement\modules\MediaManage\search\MediaSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;

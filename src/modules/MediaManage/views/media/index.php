@@ -54,7 +54,7 @@ $this->registerJs($search);
             'attribute' => 'path',
             'value'     => function($model, $key, $index, $column) {
                 return Html::a(
-                    '<img style="max-width: 100px;" src=/' . \thienhungho\MediaManagement\modules\media\Media::getOtherSizePath('thumbnail', $model->path) . '>',
+                    '<img style="max-width: 100px;" src=/' . \thienhungho\MediaManagement\modules\MediaBase\Media::getOtherSizePath('thumbnail', $model->path) . '>',
                     \yii\helpers\Url::to(['/../../' . $model->path]), [
                     'data-pjax' => '0',
                     'target'    => '_blank',
@@ -104,26 +104,26 @@ $this->registerJs($search);
             'format'              => 'raw',
             'attribute'           => 'status',
             'value'               => function($model, $key, $index, $column) {
-                if ($model->status == \thienhungho\MediaManagement\modules\media\Media::STATUS_PENDING) {
+                if ($model->status == \thienhungho\MediaManagement\modules\MediaBase\Media::STATUS_PENDING) {
                     return '<span class="label-warning label">' . __t('app', 'Pending') . '</span>';
-                } elseif ($model->status == \thienhungho\MediaManagement\modules\media\Media::STATUS_PUBLIC) {
+                } elseif ($model->status == \thienhungho\MediaManagement\modules\MediaBase\Media::STATUS_PUBLIC) {
                     return '<span class="label-success label">' . __t('app', 'Public') . '</span>';
-                } elseif ($model->status == \thienhungho\MediaManagement\modules\media\Media::STATUS_DRAFT) {
+                } elseif ($model->status == \thienhungho\MediaManagement\modules\MediaBase\Media::STATUS_DRAFT) {
                     return '<span class="label-danger label">' . __t('app', 'Draft') . '</span>';
                 }
             },
             'filterType'          => GridView::FILTER_SELECT2,
             'filter'              => \yii\helpers\ArrayHelper::map([
                 [
-                    'value' => \thienhungho\MediaManagement\modules\media\Media::STATUS_PENDING,
+                    'value' => \thienhungho\MediaManagement\modules\MediaBase\Media::STATUS_PENDING,
                     'name'  => __t('app', 'Pending'),
                 ],
                 [
-                    'value' => \thienhungho\MediaManagement\modules\media\Media::STATUS_PUBLIC,
+                    'value' => \thienhungho\MediaManagement\modules\MediaBase\Media::STATUS_PUBLIC,
                     'name'  => __t('app', 'Public'),
                 ],
                 [
-                    'value' => \thienhungho\MediaManagement\modules\media\Media::STATUS_DRAFT,
+                    'value' => \thienhungho\MediaManagement\modules\MediaBase\Media::STATUS_DRAFT,
                     'name'  => __t('app', 'Draft'),
                 ],
             ], 'value', 'name'),
