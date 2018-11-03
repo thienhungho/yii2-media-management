@@ -61,7 +61,7 @@ Add module MediaManage to your `AppConfig` file.
      * Media Manage
      */
      'media-manage' => [
-        'class' => 'backend\modules\MediaManage\MediaManage',
+        'class' => 'thienhungho\MediaManagement\modules\MediaManage\MediaManage',
      ],
     ...
 ],
