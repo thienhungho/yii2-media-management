@@ -28,7 +28,7 @@ function get_other_img_size_path($size_name, $path)
         return $path;
     }
 
-    return \thienhungho\MediaManagement\modules\media\Media::getOtherSizePath($size_name, $path);
+    return \thienhungho\MediaManagement\modules\MediaBase\Media::getOtherSizePath($size_name, $path);
 }
 
 /**
