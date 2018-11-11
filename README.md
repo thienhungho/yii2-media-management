@@ -77,3 +77,8 @@ Functions
 ------------
 
 [Core](https://github.com/thienhungho/yii2-media-management/tree/master/src/functions/core.php)
+
+Models
+------------
+
+[Media](https://github.com/thienhungho/yii2-media-management/tree/master/src/models/Media.php)

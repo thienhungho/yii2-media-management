@@ -89,10 +89,10 @@ class Media extends \yii\db\ActiveRecord
 
     /**
      * @inheritdoc
-     * @return \thienhungho\MediaManagement\modules\MediaBase\MediaQuery the active query used by this AR class.
+     * @return \thienhungho\MediaManagement\modules\MediaBase\query\MediaQuery the active query used by this AR class.
      */
     public static function find()
     {
-        return new \thienhungho\MediaManagement\modules\MediaBase\MediaQuery(get_called_class());
+        return new \thienhungho\MediaManagement\modules\MediaBase\query\MediaQuery(get_called_class());
     }
 }
