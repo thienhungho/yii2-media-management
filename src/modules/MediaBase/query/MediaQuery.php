@@ -7,7 +7,7 @@ namespace thienhungho\MediaManagement\modules\MediaBase\query;
  *
  * @see Media
  */
-class MediaQuery extends \yii\db\ActiveQuery
+class MediaQuery extends \thienhungho\ActiveQuery\models\ActiveQuery
 {
     /*public function active()
     {
