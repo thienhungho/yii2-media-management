@@ -4,7 +4,7 @@
 
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-use kartik\grid\GridView;
+use thienhungho\Widgets\models\GridView;
 use yii\helpers\Html;
 
 $this->title = t('app', 'Media');
@@ -49,7 +49,7 @@ $this->registerJs($search);
             'visible'   => false,
         ],
         [
-            'class'     => \yii\grid\DataColumn::className(),
+            'class'     => \kartik\grid\DataColumn::className(),
             'format'    => 'raw',
             'attribute' => 'path',
             'value'     => function($model, $key, $index, $column) {
@@ -60,14 +60,16 @@ $this->registerJs($search);
                     'target'    => '_blank',
                 ]);
             },
+            'vAlign'    => GridView::ALIGN_MIDDLE,
         ],
         [
-            'class'     => \yii\grid\DataColumn::className(),
+            'class'     => \kartik\grid\DataColumn::className(),
             'format'    => 'raw',
             'attribute' => 'file_size',
             'value'     => function($model, $key, $index, $column) {
                 return format_size_units($model->file_size);
             },
+            'vAlign'    => GridView::ALIGN_MIDDLE,
         ],
         [
             // this line is optional
@@ -98,6 +100,7 @@ $this->registerJs($search);
                 'placeholder' => t('app', 'Status'),
                 'id'          => 'grid-search-status',
             ],
+            'vAlign'    => GridView::ALIGN_MIDDLE,
         ],
         [
             // this line is optional
@@ -134,6 +137,7 @@ $this->registerJs($search);
                 'placeholder' => t('app', 'Status'),
                 'id'          => 'grid-search-status',
             ],
+            'vAlign'    => GridView::ALIGN_MIDDLE,
         ],
     ];
     $activeColumn = grid_view_default_active_column_cofig();
