@@ -12,49 +12,49 @@ class Media extends BaseMedia
     /**
      * @return mixed
      */
-    public static function getConfigurationThumbnailSizeWidth() {
-        return get_setting_value('media_configuration', 'thumbnail_size_width', 150);
+    public static function getConfigurationThumbnailSizeWidth($defaultValue = 150) {
+        return get_setting_value('media_configuration', 'thumbnail_size_width', $defaultValue);
     }
 
     /**
      * @return mixed
      */
-    public static function getConfigurationThumbnailSizeHeight() {
-        return get_setting_value('media_configuration', 'thumbnail_size_height', 150);
+    public static function getConfigurationThumbnailSizeHeight($defaultValue = 150) {
+        return get_setting_value('media_configuration', 'thumbnail_size_height', $defaultValue);
     }
 
     /**
      * @return mixed
      */
-    public static function getConfigurationMediumSizeWidth() {
-        return get_setting_value('media_configuration', 'medium_size_width', 300);
+    public static function getConfigurationMediumSizeWidth($defaultValue = 300) {
+        return get_setting_value('media_configuration', 'medium_size_width', $defaultValue);
     }
 
     /**
      * @return mixed
      */
-    public static function getConfigurationMediumSizeHeight() {
-        return get_setting_value('media_configuration', 'medium_size_height', 300);
+    public static function getConfigurationMediumSizeHeight($defaultValue = 300) {
+        return get_setting_value('media_configuration', 'medium_size_height', $defaultValue);
     }
 
     /**
      * @return mixed
      */
-    public static function getConfigurationLargeSizeWidth() {
-        return get_setting_value('media_configuration', 'large_size_width', 1024);
+    public static function getConfigurationLargeSizeWidth($defaultValue = 1024) {
+        return get_setting_value('media_configuration', 'large_size_width', $defaultValue);
     }
 
     /**
      * @return mixed
      */
-    public static function getConfigurationLargeSizeHeight() {
-        return get_setting_value('media_configuration', 'large_size_height', 1024);
+    public static function getConfigurationLargeSizeHeight($defaultValue = 1024) {
+        return get_setting_value('media_configuration', 'large_size_height', $defaultValue);
     }
 
     /**
      * @return mixed
      */
-    public static function getConfigurationQuality() {
-        return get_setting_value('media_configuration', 'quality', 5);
+    public static function getConfigurationQuality($defaultValue = 5) {
+        return get_setting_value('media_configuration', 'quality', $defaultValue);
     }
 }

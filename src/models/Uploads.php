@@ -1,31 +1,12 @@
 <?php
 
-namespace thienhungho\MediaManagement\modules\uploads;
-
-use thienhungho\MediaManagement\models\Media;
-use Imagine\Image\Box;
-use yii\helpers\FileHelper;
-use yii\imagine\Image;
-use yii\web\UploadedFile;
+namespace thienhungho\MediaManagement\models;
 
 /**
- * Uploads module definition class
+ * This is the model class for table "media".
  */
-class Uploads extends \yii\base\Module
+class Uploads
 {
-    /**
-     * {@inheritdoc}
-     */
-    public $controllerNamespace = 'thienhungho\MediaManagement\modules\uploads\controllers';
-
-    /**
-     * {@inheritdoc}
-     */
-    public function init()
-    {
-        parent::init();
-    }
-
     /**
      * @return bool|string
      */
