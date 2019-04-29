@@ -68,10 +68,30 @@ Add module MediaManage to your `AppConfig` file.
 ...
 ```
 
+Add module MediaConfiguration to your `AppConfig` file.
+
+```php
+...
+'modules'          => [
+    ...
+    /**
+     * Media Configuration
+     */
+     'media-configuration' => [
+        'class' => 'thienhungho\MediaManagement\modules\MediaConfiguration\MediaConfiguration',
+     ],
+    ...
+],
+...
+```
+
 Modules
 ------------
 
-[MediaBase](https://github.com/thienhungho/yii2-media-management/tree/master/src/modules/MediaBase), [MediaManage](https://github.com/thienhungho/yii2-media-management/tree/master/src/modules/MediaManage), [Uploads](https://github.com/thienhungho/yii2-media-management/tree/master/src/modules/Uploads)
+[MediaBase](https://github.com/thienhungho/yii2-media-management/tree/master/src/modules/MediaBase), 
+[MediaManage](https://github.com/thienhungho/yii2-media-management/tree/master/src/modules/MediaManage), 
+[Uploads](https://github.com/thienhungho/yii2-media-management/tree/master/src/modules/Uploads),
+[MediaConfiguration](https://github.com/thienhungho/yii2-media-management/tree/master/src/modules/Uploads)
 
 Functions
 ------------
@@ -81,4 +101,5 @@ Functions
 Models
 ------------
 
-[Media](https://github.com/thienhungho/yii2-media-management/tree/master/src/models/Media.php)
+[Media](https://github.com/thienhungho/yii2-media-management/tree/master/src/models/Media.php), 
+[MediaConfigurationForm](https://github.com/thienhungho/yii2-media-management/tree/master/src/models/MediaConfigurationForm.php)
